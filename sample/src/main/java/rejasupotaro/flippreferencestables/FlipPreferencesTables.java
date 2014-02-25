@@ -9,28 +9,28 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-public class PreferencesTables {
+public class FlipPreferencesTables {
 
     private static final String[] HEADERS = {"key", "value"};
 
-    private SharedPreferences prefs;
+    private String[] keys;
+
+    private String[] values;
 
     private List<KeyValue> rows = new ArrayList<KeyValue>();
 
-    public static PreferencesTables makeTable(SharedPreferences prefs) {
-        return new PreferencesTables(prefs);
+    public static FlipPreferencesTables makeTable(SharedPreferences prefs) {
+        return new FlipPreferencesTables(prefs);
     }
 
-    private PreferencesTables(SharedPreferences prefs) {
-        this.prefs = prefs;
+    private FlipPreferencesTables(SharedPreferences prefs) {
+        Map<String, ?> map = prefs.getAll();
+        keys = toArray(map.keySet());
+        values = toArray(map.values());
     }
 
     public FlipTables all() {
-        Map<String, ?> map = prefs.getAll();
-        String[] keys = toArray(map.keySet());
-        String[] values = toArray(map.values());
-
-        for (int i = 0; i < map.size(); i++) {
+        for (int i = 0; i < keys.length; i++) {
             rows.add(new KeyValue(keys[i], values[i]));
         }
 
@@ -38,11 +38,7 @@ public class PreferencesTables {
     }
 
     public FlipTables in(String... containsKeys) {
-        Map<String, ?> map = prefs.getAll();
-        String[] keys = toArray(map.keySet());
-        String[] values = toArray(map.values());
-
-        for (int i = 0; i < map.size(); i++) {
+        for (int i = 0; i < keys.length; i++) {
             if (contains(containsKeys, keys[i])) {
                 rows.add(new KeyValue(keys[i], values[i]));
             }
@@ -52,11 +48,7 @@ public class PreferencesTables {
     }
 
     public FlipTables notIn(String... containsKeys) {
-        Map<String, ?> map = prefs.getAll();
-        String[] keys = toArray(map.keySet());
-        String[] values = toArray(map.values());
-
-        for (int i = 0; i < map.size(); i++) {
+        for (int i = 0; i < keys.length; i++) {
             if (!contains(containsKeys, keys[i])) {
                 rows.add(new KeyValue(keys[i], values[i]));
             }

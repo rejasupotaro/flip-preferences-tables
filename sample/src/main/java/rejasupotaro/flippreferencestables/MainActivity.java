@@ -22,13 +22,13 @@ public class MainActivity extends ActionBarActivity {
         StringBuilder builder = new StringBuilder();
         builder.append("(╯°□°）╯︵ ┻━┻\n\n");
         builder.append("[all]\n");
-        builder.append(PreferencesTables.makeTable(prefs).all().toString());
+        builder.append(FlipPreferencesTables.makeTable(prefs).all().toString());
         builder.append("\n");
         builder.append("[in Foo]\n");
-        builder.append(PreferencesTables.makeTable(prefs).in("Foo").toString());
+        builder.append(FlipPreferencesTables.makeTable(prefs).in("Foo").toString());
         builder.append("\n");
         builder.append("[not in Foo]\n");
-        builder.append(PreferencesTables.makeTable(prefs).notIn("Foo").toString());
+        builder.append(FlipPreferencesTables.makeTable(prefs).notIn("Foo").toString());
 
         TextView textView = (TextView) findViewById(R.id.text);
         textView.setText(builder.toString());
