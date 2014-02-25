@@ -24,9 +24,10 @@ public class MainActivity extends ActionBarActivity {
                 {"Kit", "Kat"},
                 {"Ping", "Pong"},
         };
-
-        Log.d("DEBUG", FlipTables.makeTable(headers, data).toString());
         textView.setText(FlipTables.makeTable(headers, data).toString());
+
+        PreferencesUtils.writeDummyDate(this);
+        PreferencesUtils.dump(this);
     }
 
 
