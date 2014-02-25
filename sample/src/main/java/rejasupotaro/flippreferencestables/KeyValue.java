@@ -1,4 +1,4 @@
-package rejasupotaro.preferencestables;
+package rejasupotaro.flippreferencestables;
 
 public class KeyValue {
 

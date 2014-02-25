@@ -1,4 +1,4 @@
-package rejasupotaro.preferencestables;
+package rejasupotaro.flippreferencestables;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -20,6 +20,7 @@ public class MainActivity extends ActionBarActivity {
         writeDummyDate(prefs);
 
         StringBuilder builder = new StringBuilder();
+        builder.append("(╯°□°）╯︵ ┻━┻\n\n");
         builder.append("[all]\n");
         builder.append(PreferencesTables.makeTable(prefs).all().toString());
         builder.append("\n");
