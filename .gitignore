@@ -11,10 +11,3 @@ secret.gradle
 *~
 *.swp
 .DS_Store
-
-com_crashlytics_export_strings.xml
-
-secret.gradle
-rebuild.keystore
-
-test_servers
