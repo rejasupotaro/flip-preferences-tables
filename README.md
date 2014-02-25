@@ -55,7 +55,7 @@ Log.d("prefs", data);
 Screenshow
 -------
 
-<img src="https://raw.github.com/rejasupotaro/preferences-tables/master/screenshot.png" width="240">
+<img src="https://raw.github.com/rejasupotaro/flip-preferences-tables/master/screenshot.png" width="240">
 
 License
 -------
