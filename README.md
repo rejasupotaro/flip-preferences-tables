@@ -52,7 +52,7 @@ Log.d("prefs", data);
 ╚═══════════╧══════════╝
 ```
 
-Screenshow
+Screenshot
 -------
 
 <img src="https://raw.github.com/rejasupotaro/flip-preferences-tables/master/screenshot.png" width="240">
