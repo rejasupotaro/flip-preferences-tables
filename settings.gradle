@@ -1,1 +1,1 @@
-include ':sample', ':flip-tables'
+include ':sample'

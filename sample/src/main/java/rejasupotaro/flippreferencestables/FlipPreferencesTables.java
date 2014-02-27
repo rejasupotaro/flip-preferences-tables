@@ -1,6 +1,6 @@
 package rejasupotaro.flippreferencestables;
 
-import com.jakewharton.fliptables.FlipTables;
+import com.jakewharton.fliptables.FlipTable;
 
 import android.content.SharedPreferences;
 
@@ -19,7 +19,7 @@ public class FlipPreferencesTables {
 
     private List<KeyValue> rows = new ArrayList<KeyValue>();
 
-    public static FlipPreferencesTables makeTable(SharedPreferences prefs) {
+    public static FlipPreferencesTables of(SharedPreferences prefs) {
         return new FlipPreferencesTables(prefs);
     }
 
@@ -29,32 +29,32 @@ public class FlipPreferencesTables {
         values = toArray(map.values());
     }
 
-    public FlipTables all() {
+    public String all() {
         for (int i = 0; i < keys.length; i++) {
             rows.add(new KeyValue(keys[i], values[i]));
         }
 
-        return FlipTables.makeTable(HEADERS, toArray(rows));
+        return FlipTable.of(HEADERS, toArray(rows));
     }
 
-    public FlipTables in(String... containsKeys) {
+    public String in(String... containsKeys) {
         for (int i = 0; i < keys.length; i++) {
             if (contains(containsKeys, keys[i])) {
                 rows.add(new KeyValue(keys[i], values[i]));
             }
         }
 
-        return FlipTables.makeTable(HEADERS, toArray(rows));
+        return FlipTable.of(HEADERS, toArray(rows));
     }
 
-    public FlipTables notIn(String... containsKeys) {
+    public String notIn(String... containsKeys) {
         for (int i = 0; i < keys.length; i++) {
             if (!contains(containsKeys, keys[i])) {
                 rows.add(new KeyValue(keys[i], values[i]));
             }
         }
 
-        return FlipTables.makeTable(HEADERS, toArray(rows));
+        return FlipTable.of(HEADERS, toArray(rows));
     }
 
     private String[] toArray(Collection<?> collection) {

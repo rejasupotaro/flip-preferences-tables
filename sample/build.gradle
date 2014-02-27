@@ -20,5 +20,5 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:+'
-    compile project(':flip-tables')
+    compile 'com.jakewharton.fliptables:fliptables:1.0.0'
 }
