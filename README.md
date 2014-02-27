@@ -11,7 +11,7 @@ Usage
 -----
 
 ```java
-String data = PreferencesTables.makeTable(prefs).all().toString();
+String data = PreferencesTables.of(prefs).all();
 Log.d("prefs", data);
 ```
 ```
@@ -27,7 +27,7 @@ Log.d("prefs", data);
 ```
 
 ```java
-String data = PreferencesTables.makeTable(prefs).in("Foo").toString();
+String data = PreferencesTables.of(prefs).in("Foo");
 Log.d("prefs", data);
 ```
 ```
@@ -39,7 +39,7 @@ Log.d("prefs", data);
 ```
 
 ```java
-String data = PreferencesTables.makeTable(prefs).notIn("Foo").toString();
+String data = PreferencesTables.makeTable(prefs).notIn("Foo");
 Log.d("prefs", data);
 ```
 ```
