@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import rejasupotaro.example.flippreferencestables.R;
-import rejasupotaro.example.flippreferencetables.FlipPreferencesTables;
+import rejasupotaro.flippreferencestables.FlipPreferencesTables;
 
 public class MainActivity extends ActionBarActivity {
 

@@ -1,4 +1,4 @@
-package rejasupotaro.example.flippreferencetables;
+package rejasupotaro.flippreferencestables;
 
 public class KeyValue {
 
