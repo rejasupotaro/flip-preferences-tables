@@ -1,4 +1,4 @@
-package rejasupotaro.flippreferencestables;
+package rejasupotaro.example.flippreferencetables;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -8,6 +8,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import rejasupotaro.example.flippreferencestables.R;
+import rejasupotaro.example.flippreferencetables.FlipPreferencesTables;
 
 public class MainActivity extends ActionBarActivity {
 

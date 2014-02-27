@@ -1,4 +1,4 @@
-package rejasupotaro.flippreferencestables;
+package rejasupotaro.example.flippreferencetables;
 
 import com.jakewharton.fliptables.FlipTable;
 
